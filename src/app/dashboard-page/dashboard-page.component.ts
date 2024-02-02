@@ -19,4 +19,11 @@ export class DashboardPageComponent implements OnInit {
       
     }
   }
+
+  delect(index: number) {
+    if (confirm('Are you sure you want to delete this student?')) {
+      this.stustudentArray.splice(index, 1);
+      localStorage.setItem('stustudents', JSON.stringify(this.stustudentArray));
+    }
+  }
 }

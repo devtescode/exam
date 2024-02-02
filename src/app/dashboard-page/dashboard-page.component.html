@@ -3,7 +3,7 @@
     <div class="col-md-6 col-sm-12 mx-auto shadow p-3 text-center">
       <h3 class="text-center text-primary">Dashboard</h3>
     </div>
-    <div *ngFor="let item of stustudentArray" class="container shadow-lg">
+    <div *ngFor="let item of stustudentArray let i = index" class="container shadow-lg">
       <p>Department ----------------------------------{{item.studepartment}}</p>
       <p>Email-----------------------------------------{{item.stuemail }}</p>
       <p>Firstname---------------------------------------{{item.stufirstname}}</p>
@@ -11,5 +11,6 @@
       <p>Lastname------------------------------------------{{item.stulastname}}</p>
       <p>Matric----------------------------------{{item.stumatric}}</p>
       <p>Password-----------------------------------------{{item.stupassword}}</p>
-  </div>
+      <button class="btn btn-danger" (click)="delect(i)">delect</button>
+    </div>
   
