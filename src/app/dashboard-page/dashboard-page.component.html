@@ -3,15 +3,42 @@
     <div class="col-md-6 col-sm-12 mx-auto shadow p-3 text-center">
       <h3 class="text-center text-primary">Dashboard</h3>
     </div>
-    <div *ngFor="let item of stustudentArray let i = index" class="container shadow-lg">
-      
-      <p>Department ----------------------------------{{item.studepartment}}</p>
-      <p>Email-----------------------------------------{{item.stuemail }}</p>
-      <p>Firstname---------------------------------------{{item.stufirstname}}</p>
-      <p>Gender--------------------------------------------{{item.stugender}}</p>
-      <p>Lastname------------------------------------------{{item.stulastname}}</p>
-      <p>Matric----------------------------------{{item.stumatric}}</p>
-      <p>Password-----------------------------------------{{item.stupassword}}</p>
-      <button class="btn btn-danger" (click)="delect(i)">delect</button>
+    <div class="container shadow-lg">
+<!--       
+      <p> ----------------------------------</p>
+      <p>-----------------------------------------</p>
+      <p>---------------------------------------</p>
+      <p>--------------------------------------------</p>
+      <p>------------------------------------------</p>
+      <p>----------------------------------</p>
+      <p>-----------------------------------------</p> -->
     </div>
-  
+    <table class="table"  *ngFor="let item of stustudentArray let i = index">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Department</th>
+          <th scope="col">Email</th>
+          <th scope="col">Firstname</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Matric</th>
+          <th scope="col">Password</th>
+          <th scope="col">Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{item.studepartment}}</td>
+          <td>{{item.stuemail }}</td>
+          <td>{{item.stufirstname}}</td>
+          <td>{{item.stugender}}</td>
+          <td>{{item.stulastname}}</td>
+          <td>{{item.stumatric}}</td>
+          <td>{{item.stupassword}}</td>
+          <td><button class="btn btn-danger" (click)="delect(i)">delect</button></td>
+        </tr>
+      </tbody>
+    </table>
