@@ -3,7 +3,7 @@ import { CanActivateFn, Router } from '@angular/router';
 
 export const adminGuardGuard: CanActivateFn = (route, state) => {
   let routes = inject (Router)
-  let user = JSON.parse(localStorage.getItem('current_user')!)
+  let user = JSON.parse(localStorage['current_user'])
   if(!user){
     routes.navigate(['signin'])
   }
