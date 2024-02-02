@@ -2,17 +2,14 @@
 <div class="container">
     <div class="col-md-6 col-sm-12 mx-auto shadow p-3 text-center">
       <h3 class="text-center text-primary">Dashboard</h3>
-      <div *ngIf="stustudentArray && stustudentArray.length > 0">
-        <h4>Student List</h4>
-        <ul>
-          <li *ngFor="let student of stustudentArray">
-            {{ this.stustudentArray.stufirstname }} {{ stustudentArray.stulastname }} - {{ this.stustudentArray.stugender }}
-          </li>
-        </ul>stustudentArray
-      </div>
-      <div *ngIf="!stustudentArray || stustudentArray.length === 0">
-        <p>No students available.</p>
-      </div>
     </div>
+    <div *ngFor="let item of stustudentArray" class="container shadow-lg">
+      <p>Department ----------------------------------{{item.studepartment}}</p>
+      <p>Email-----------------------------------------{{item.stuemail }}</p>
+      <p>Firstname---------------------------------------{{item.stufirstname}}</p>
+      <p>Gender--------------------------------------------{{item.stugender}}</p>
+      <p>Lastname------------------------------------------{{item.stulastname}}</p>
+      <p>Matric----------------------------------{{item.stumatric}}</p>
+      <p>Password-----------------------------------------{{item.stupassword}}</p>
   </div>
   
