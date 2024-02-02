@@ -1,0 +1,14 @@
+
+
+<div class="container">
+    <div class="col-md-6 col-sm-12 mx-auto shadow p-3 text-center">
+        <h3 class="text-center text-primary">Admin Sign up page</h3>
+        <input type="text" [(ngModel)]="firstname" placeholder="Firstname" class="form-control p-3 my-2">
+        <input type="text" [(ngModel)]="lastname" placeholder="lastname" class="form-control p-3 my-2">
+        <input type="text" [(ngModel)]="email"  placeholder="email" class="form-control p-3 my-2">
+        <input type="text" [(ngModel)]="department" placeholder="Department" class="form-control p-3 my-2">
+        <input type="text" [(ngModel)]="password"  placeholder="password" class="form-control p-3 my-2">
+        <button class="btn btn-primary" (click)="signup()">Sign Up</button>
+        <div class="text-danger text-center">{{message}}</div>
+    </div>
+</div>

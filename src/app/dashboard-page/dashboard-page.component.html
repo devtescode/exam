@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="col-md-6 col-sm-12 mx-auto shadow p-3 text-center">
+      <h3 class="text-center text-primary">Dashboard</h3>
+      <div *ngIf="stustudentArray && stustudentArray.length > 0">
+        <h4>Student List</h4>
+        <ul>
+          <li *ngFor="let student of stustudentArray">
+            {{ this.stustudentArray.stufirstname }} {{ stustudentArray.stulastname }} - {{ this.stustudentArray.stugender }}
+          </li>
+        </ul>stustudentArray
+      </div>
+      <div *ngIf="!stustudentArray || stustudentArray.length === 0">
+        <p>No students available.</p>
+      </div>
+    </div>
+  </div>
+  

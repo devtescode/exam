@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 shadow-lg text-center p-3 mt-5">
+        <h3 class="text-center text-primary">Admin Sign in page</h3>
+            <input type="text" class="form-control my-2" placeholder="Email" [(ngModel)]="email">
+            <input type="text" class="form-control my-2" placeholder="password" [(ngModel)]="password">
+            <button (click)="signin()" class="btn btn-success">Login</button>
+        </div>
+        <div>
+            {{message}}
+        </div>
+    </div>
+</div>
